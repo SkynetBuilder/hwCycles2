@@ -46,6 +46,8 @@ public class Main {
         while (year < 10) {
             year++;
             population = population + birthRate - mortalityRate;
+            birthRate = (population / 1000) * 17;
+            mortalityRate = (population / 1000) * 8;
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
     }
@@ -110,16 +112,9 @@ public class Main {
     public static void task8() {
         System.out.println("Задача 8");
         int year = 1823;
-        while (year <= 2023) {
+        while (year <= 2123) {
             if (year % 79 == 0) {
                 System.out.println(year);
-            }
-            year++;
-        }
-        while (true) {
-            if (year % 79 == 0) {
-                System.out.println(year);
-                break;
             }
             year++;
         }
